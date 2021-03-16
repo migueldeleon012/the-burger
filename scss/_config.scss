@@ -1,0 +1,70 @@
+//MAIN COLORS
+$primary-color: #272727;
+$accent-color: #ff7300;
+$text-color:#fff;
+
+
+
+@mixin clearFix{
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin grid ($cols, $margin){
+    float: left;
+    margin-right: $margin;
+    margin-bottom: $margin;
+    width: ((100% - (($cols - 1) * $margin)) / $cols);
+    display: flex;
+    justify-content: center;
+
+    &:nth-child(#{$cols}n){
+        margin-right: 0;
+    }
+}
+
+@mixin flexColumn{
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin media-xxl {
+    @media screen and (min-width: 1400px) {
+        @content;
+    }
+}

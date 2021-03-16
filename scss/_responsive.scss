@@ -1,0 +1,239 @@
+@include media-md{
+    body{
+
+
+        .line{
+            height: 3px;
+        }
+
+        .header{
+            @include flexCenter;
+
+            &__hero{
+                text-align: center;
+                line-height: 50px;
+
+                .line{
+                    margin: 20px 0;
+                }   
+
+                h1{
+                    font-size: 60px;
+                }
+
+                h4{
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .about-us{
+            &__wrapper{
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            &__grid{
+                width: 40%;
+                h2{
+                    margin: 15px 0 0 0;
+                }
+            }
+        }
+
+        .services{
+            &__wrapper{
+                flex-direction: row;
+                justify-content: center
+            }
+
+            i{
+                font-size: 24px
+            }
+            
+        }
+
+        .menu{
+            &__items{
+                @include grid(2,4%);
+                margin: 0 10px;
+
+                .line{
+                    height: 1px;
+                }
+            }
+        }
+
+        .footer{
+            &__grid{
+                @include grid(3,2%);
+
+                h2{
+                    font-size: 26px;
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+}
+
+
+@include media-lg{
+    body{
+        section{
+            padding: 50px 0;
+        }
+
+        h2{
+            font-size: 50px;
+            margin-bottom: 70px;
+        }
+        .nav{
+            justify-content: space-around;
+    
+            &__burger{
+                visibility: hidden;
+            }
+    
+            .nav__list{
+                position: static;
+                width: 40%;
+                height: 100%;
+                opacity: 1;
+                flex-direction: row;
+                transform: translate(0,0);
+    
+                &__item{
+                    font-size: 16px;
+                }
+            }
+        }
+    
+        .header{
+            &__hero{
+                h1{
+                    font-size: 70px;
+                }
+            }
+        }
+    
+        .about-us{
+            &__grid{
+                h2{
+                    font-size: 40px;
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+    
+        .services{
+            &__grid__circle{
+                width: 30%;
+                padding-top: 30%;
+                i{
+                    font-size: 32px;
+                }
+            }
+
+            h3{
+                font-size: 30px
+            }
+        }
+    
+        .menu{
+            &__items{
+                @include grid(3, 2%);
+                h3{
+                    font-size: 30px;
+                }
+
+                .line{
+                    height: 1px;
+                }
+            }
+        }
+    }
+}
+
+@include media-xl{
+    body{
+
+        .menu{
+            &__items{
+                h3{
+                    font-size: 24px;
+                }
+    
+                .line{
+                    height: 2px;
+                }
+            }
+        } 
+
+        .services{
+
+            &__grid{
+
+                &__circle{
+                    i{
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-xxl{
+    body{
+
+        .nav{
+            height: 60px;
+
+            &__logo{
+                font-size: 26px;
+            }
+
+            &__list{
+
+                .nav__list__item{
+                    font-size: 18px;
+                }
+            }
+        }
+
+        
+        .header{
+            &__hero{
+                h1{
+                    font-size: 80px;
+                }
+            }
+        }
+
+        .services{
+            i{
+                font-size: 36px;
+            }
+        }
+
+        .footer{
+            &__grid{
+                h2{
+                    font-size: 40px;
+                }
+
+                h6{
+                    font-size: 16px;
+                }   
+                
+                a,p{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
